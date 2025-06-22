@@ -13,7 +13,7 @@ struct AppView: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                LiveView()
+                LiveView(viewModel: .init())
                     .tabItem {
                         Label("Live", systemImage: "bitcoinsign")
                     }
