@@ -8,6 +8,21 @@
 import SwiftUI
 import MEUI
 
+enum HistoryRoute: Routable {
+    case history
+    case dayDetail(DayPreview)
+}
+
+extension HistoryRoute {
+    @ViewBuilder var body: some View {
+        switch self {
+        case .history: HistoryView(viewModel: .init())
+        case let .dayDetail(preview): DayDetailView(viewModel: .init(preview: preview))
+        }
+    }
+}
+
+
 @main
 struct AppView: App {
     var body: some Scene {
@@ -17,7 +32,7 @@ struct AppView: App {
                     .tabItem {
                         Label("Live", systemImage: "bitcoinsign")
                     }
-                HistoryView()
+                RouterView(route: HistoryRoute.history)
                     .tabItem {
                         Label("History", systemImage: "calendar")
                     }

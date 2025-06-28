@@ -29,12 +29,6 @@ class LiveViewModel {
 
 
 struct LiveView: View {
-    enum State {
-        case loaded
-        case loading
-        case error
-    }
-
     let viewModel: LiveViewModel
 
     var body: some View {

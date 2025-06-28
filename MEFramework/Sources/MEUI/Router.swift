@@ -8,7 +8,7 @@
 import SwiftUI
 import Observation
 
-public typealias Routable = Hashable & View
+public protocol Routable: View, Hashable { }
 
 @Observable
 public final class Router<Route: Routable> {
@@ -27,18 +27,17 @@ public final class Router<Route: Routable> {
     }
 }
 
-public struct RouterView<RootView: View, Route: Routable>: View {
-    @State
-    private var router = Router<Route>()
-    private let rootView: RootView
+public struct RouterView<Route: Routable>: View {
+    private let route: Route
+    @State private var router = Router<Route>()
 
-    public init(rootView: () -> RootView) {
-        self.rootView = rootView()
+    public init(route: Route) {
+        self.route = route
     }
 
     public var body: some View {
         NavigationStack(path: $router.routes) {
-            rootView
+            route
                 .navigationDestination(for: Route.self) { $0 }
         }
         .environment(router)
