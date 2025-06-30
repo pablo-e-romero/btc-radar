@@ -8,12 +8,6 @@
 import SwiftUI
 import Observation
 
-enum LiveState {
-    case loaded
-    case loading
-    case error
-}
-
 @Observable
 class LiveViewModel {
     var value: String
@@ -27,6 +21,11 @@ class LiveViewModel {
     }
 }
 
+enum LiveState {
+    case loaded
+    case loading
+    case error
+}
 
 struct LiveView: View {
     let viewModel: LiveViewModel

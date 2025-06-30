@@ -19,6 +19,7 @@ final class RootViewModel {
 enum Section {
     case live
     case history
+    case settings
 }
 
 struct RootView: View {
@@ -41,6 +42,12 @@ struct RootView: View {
                     Label("History", systemImage: "calendar")
                 }
                 .tag(Section.history)
+
+            SettingsView(viewModel: .init())
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+                .tag(Section.settings)
         }
     }
 }
