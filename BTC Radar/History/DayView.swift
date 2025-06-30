@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import MEUtils
 
 @Observable
-final class DayDetailViewModel {
+final class DayViewModel: HashableObject {
     let value: String
     let day: String
 
@@ -18,18 +19,18 @@ final class DayDetailViewModel {
     }
 }
 
-struct DayDetailView: View {
-    let viewModel: DayDetailViewModel
+struct DayView: View {
+    let viewModel: DayViewModel
 
     var body: some View {
         VStack {
             Text(viewModel.value)
-            Text(viewModel.day)
         }
+        .navigationTitle(viewModel.day)
     }
 }
 
 #Preview {
-    DayDetailView(viewModel: .init(preview: .init(id: "1", day: "20/10/2025", value: "100.000")))
+    DayView(viewModel: DayViewModel(preview: .init(id: "1", day: "20/10/2025", value: "100.000")))
 }
 

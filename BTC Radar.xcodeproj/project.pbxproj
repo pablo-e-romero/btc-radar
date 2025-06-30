@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B10206132E07050200088767 /* MEUI in Frameworks */ = {isa = PBXBuildFile; productRef = B10206122E07050200088767 /* MEUI */; };
+		B1014F922E12CEB4007971EE /* MEUtils in Frameworks */ = {isa = PBXBuildFile; productRef = B1014F912E12CEB4007971EE /* MEUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B10206132E07050200088767 /* MEUI in Frameworks */,
+				B1014F922E12CEB4007971EE /* MEUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +127,7 @@
 			);
 			name = "BTC Radar";
 			packageProductDependencies = (
-				B10206122E07050200088767 /* MEUI */,
+				B1014F912E12CEB4007971EE /* MEUtils */,
 			);
 			productName = "BTC Radar";
 			productReference = B10205E02E0704AC00088767 /* BTC Radar.app */;
@@ -568,9 +568,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B10206122E07050200088767 /* MEUI */ = {
+		B1014F912E12CEB4007971EE /* MEUtils */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MEUI;
+			productName = MEUtils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

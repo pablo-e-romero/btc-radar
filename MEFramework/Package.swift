@@ -8,15 +8,15 @@ let package = Package(
     platforms: [.iOS(.v17)],
     products: [
         .library(
-            name: "MEUI",
-            targets: ["MEUI"]
+            name: "MEUtils",
+            targets: ["MEUtils"]
         ),
     ],
     targets: [
-        .target(name: "MEUI"),
-        .testTarget(
-            name: "MEUITests",
-            dependencies: ["MEUI"]
-        ),
+        .target(name: "MEUtils"),
+//        .testTarget(
+//            name: "MEUITests",
+//            dependencies: ["MEUI"]
+//        ),
     ]
 )

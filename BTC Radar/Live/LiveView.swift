@@ -32,9 +32,12 @@ struct LiveView: View {
     let viewModel: LiveViewModel
 
     var body: some View {
-        VStack {
-            Text(viewModel.value)
-            Text(viewModel.updateAt)
+        NavigationStack {
+            VStack {
+                Text(viewModel.value)
+                Text(viewModel.updateAt)
+            }
+            .navigationTitle("Live")
         }
     }
 }
