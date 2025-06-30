@@ -11,9 +11,14 @@ let package = Package(
             name: "MEUtils",
             targets: ["MEUtils"]
         ),
+        .library(
+            name: "MEInjected",
+            targets: ["MEInjected"]
+        ),
     ],
     targets: [
         .target(name: "MEUtils"),
+        .target(name: "MEInjected"),
 //        .testTarget(
 //            name: "MEUITests",
 //            dependencies: ["MEUI"]
